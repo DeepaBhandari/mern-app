@@ -36,7 +36,7 @@ const addNewBlog = async(req, res)=>{
     session.commitTransaction()
 
     }catch(e){
-        return res.send(500).json({message: e})
+        return res.status(500).json({message: e})
     }
     return res.status(200).json({newlyCreateBlog});
 }
